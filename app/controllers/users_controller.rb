@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(strong_params)
   	#debugger
   	if @user.save
-
+  		redirect_to @user
   	else
   		render 'new'
   	end
