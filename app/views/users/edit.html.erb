@@ -19,6 +19,8 @@
 
       <%= f.submit "Save chane", class: "btn btn-primary" %>
     <% end %>
+
+    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
 <!--
     <div class="gravatar_edit">
       <%= gravatar_for @user %>

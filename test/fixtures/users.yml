@@ -3,6 +3,7 @@ ram:
   name: Ram bharose
   email: rbrana@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 rbrana:
   name: Rana R. bharose
