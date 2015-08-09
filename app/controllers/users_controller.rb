@@ -8,4 +8,18 @@ class UsersController < ApplicationController
   	#debugger #Debugging
   end
 
+  def create
+  	@user = User.new(strong_params)
+  	if @user.save?
+  	else
+  		render 'new'
+  	end
+  end
+
+  private
+  def strong_params
+  	params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+
 end
