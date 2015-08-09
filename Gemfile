@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.2'
+gem 'faker',                '1.4.2'
 gem 'puma',           '2.11.1' #WEBrick isn’t suitable for production use, so we’ll replace WEBrick with Puma
 gem 'bootstrap-sass',       '3.2.0.0' #Bootstrap and custom CSS
 gem 'bcrypt',               '3.1.7' # has_secure_password uses state-of-the-art hash function called bcrypt
