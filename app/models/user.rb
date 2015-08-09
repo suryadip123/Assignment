@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  
+
+  has_many :newsposts
+  
+
   attr_accessor :remember_token
 	before_save { self.email = email.downcase } #passes a block to the before_save callback and sets the user’s email address to a lower-case
 	validates :name,  presence: true, length: { maximum: 50 }
