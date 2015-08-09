@@ -10,7 +10,9 @@ class UsersController < ApplicationController
 
   def create
   	@user = User.new(strong_params)
-  	if @user.save?
+  	#debugger
+  	if @user.save
+
   	else
   		render 'new'
   	end
