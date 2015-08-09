@@ -21,6 +21,9 @@ class NewspostTest < ActiveSupport::TestCase
  		assert_not @newspost.valid?
  	end
 
+ 	test "order should be most recent first" do
+    assert_equal newsposts(:most_recent), Newspost.first
+  end
 
 
 end

@@ -7,3 +7,7 @@ one:
 two:
   content: MyText
   user_id: 
+
+most_recent:
+  content: "Writing a short news"
+  created_at: <%= Time.zone.now %>
