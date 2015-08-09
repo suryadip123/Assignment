@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(strong_params)
   	#debugger
   	if @user.save
+      log_in @user
   		flash[:success] = "Welcome to News Bulletin Portal"
   		redirect_to @user
   	else
