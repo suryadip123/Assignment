@@ -15,5 +15,9 @@ class NewsTest < ActiveSupport::TestCase
 			assert_not @news.valid?
 		end
 
+		test "content should be present" do
+			@news.content = "   "
+			assert_not @news.valid?
+		end
 
 end 
