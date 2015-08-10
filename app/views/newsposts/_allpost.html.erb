@@ -1,0 +1,12 @@
+<% news = Newspost.all %>
+news.each do |newspost| do
+	<li id="newspost-<%= newspost.id %>">
+
+	  <%= link_to gravatar_for(newspost.user, size: 50), newspost.user %>
+	  <span class="user"><%= link_to newspost.user.name, newspost.user %></span>
+	  <span class="content"><%= newspost.content %></span>
+	  <span class="timestamp">
+	    Posted <%= time_ago_in_words(newspost.created_at) %> ago.
+	  </span>
+	</li>
+<% end %>

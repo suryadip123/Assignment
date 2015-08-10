@@ -24,8 +24,15 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
     @newsposts = @user.newsposts.paginate(page: params[:page])
+    @allpost = Newspost.all.paginate(page: params[:page])
   	#debugger #Debugging
   end
+
+  def yourprofile
+    @user = User.find(params[:id])
+    @newsposts = @user.newsposts.paginate(page: params[:page])
+  end
+
 
   def create
   	@user = User.new(strong_params)
